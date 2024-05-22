@@ -1,0 +1,15 @@
+<div class="container" *ngIf="items.length; else noData" >
+    <!-- <div class="image" *ngFor="let item of items">
+    </div> -->
+    <div class="content" *ngFor="let item of items">
+        <img class="image" [src]="item.imageUrl" alt="">
+        <button class="tag">interior</button>
+        <h1 class="title">{{item.title}}</h1>
+        <p class="description">{{item.description}}</p>
+            <button class="readMore">Read More</button>
+    </div>
+</div>
+
+<ng-template #noData>
+    <p>No items to display.</p>
+  </ng-template>
